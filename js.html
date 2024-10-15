@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programas Consolidados</title>
+    <script>
+        // 1. Maior número entre dois números fornecidos pelo usuário
+        function encontrarMaiorNumero() {
+            let num1 = parseFloat(prompt("Digite o primeiro número:"));
+            let num2 = parseFloat(prompt("Digite o segundo número:"));
+            let maior = (num1 > num2) ? num1 : num2;
+            alert("O maior número é: " + maior);
+        }
+
+        // 2. Menor número entre dois números fornecidos pelo usuário
+        function menorEntreDois() {
+            let num1 = parseFloat(prompt("Digite o primeiro número:"));
+            let num2 = parseFloat(prompt("Digite o segundo número:"));
+            let menor = (num1 < num2) ? num1 : num2;
+            alert("O menor número é: " + menor);
+        }
+
+        // 3. Mensagem de acordo com a nota do usuário
+        function avaliarNota() {
+            let nota = parseFloat(prompt("Digite a sua nota:"));
+            if (nota < 6) {
+                alert("Reprovado");
+            } else if (nota >= 6 && nota < 8) {
+                alert("Aprovado");
+            } else {
+                alert("Aprovado com louvor");
+            }
+        }
+
+        // 4. Média dos números de um vetor
+        function calcularMediaVetor() {
+            let vetor = prompt("Digite os números do vetor separados por vírgula:").split(',').map(Number);
+            let soma = vetor.reduce((a, b) => a + b, 0);
+            let media = soma / vetor.length;
+            alert("A média dos números do vetor é: " + media);
+        }
+
+        // 5. Mensagem de acordo com o valor de uma variável
+        function verificarLetra() {
+            let letra = prompt("Digite uma letra (a ou b):").toLowerCase();
+            if (letra === "a") {
+                alert("A");
+            } else if (letra === "b") {
+                alert("B");
+            } else {
+                alert("Outra letra");
+            }
+        }
+
+        // 6. Soma dos elementos de uma matriz
+        function somaMatriz() {
+            let matriz = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ];
+            let soma = 0;
+            for (let i = 0; i < matriz.length; i++) {
+                for (let j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                }
+            }
+            alert("A soma dos elementos da matriz é: " + soma);
+        }
+
+        // 7. Fatorial de um número fornecido pelo usuário
+        function calcularFatorial() {
+            let num = parseInt(prompt("Digite um número:"));
+            let fatorial = 1;
+            for (let i = 1; i <= num; i++) {
+                fatorial *= i;
+            }
+            alert("O fatorial de " + num + " é: " + fatorial);
+        }
+
+        // 8. Menu de opções
+        function menuOpcoes() {
+            let escolha = parseInt(prompt("Escolha uma opção:\n1. Opção 1\n2. Opção 2\n3. Opção 3"));
+            switch (escolha) {
+                case 1:
+                    alert("Opção 1 escolhida");
+                    break;
+                case 2:
+                    alert("Opção 2 escolhida");
+                    break;
+                case 3:
+                    alert("Opção 3 escolhida");
+                    break;
+                default:
+                    alert("Opção inválida");
+            }
+        }
+
+        // 9. Maior número de um vetor
+        function maiorNumeroVetor() {
+            let vetor = prompt("Digite os números do vetor separados por vírgula:").split(',').map(Number);
+            let maior = Math.max(...vetor);
+            alert("O maior número do vetor é: " + maior);
+        }
+
+        // 10. Média dos elementos de uma matriz
+        function mediaMatriz() {
+            let matriz = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9]
+            ];
+            let soma = 0, totalElementos = 0;
+            for (let i = 0; i < matriz.length; i++) {
+                for (let j = 0; j < matriz[i].length; j++) {
+                    soma += matriz[i][j];
+                    totalElementos++;
+                }
+            }
+            let media = soma / totalElementos;
+            alert("A média dos elementos da matriz é: " + media);
+        }
+    </script>
+</head>
+<body>
+    <h1>TRABalhooOOooOoOOOoOo</h1>
+    <button onclick="encontrarMaiorNumero()">1. Maior Numero entre Dois</button><br><br>
+    <button onclick="menorEntreDois()">2. Menor Numero entre Dois</button><br><br>
+    <button onclick="avaliarNota()">3. Avaliar Nota</button><br><br>
+    <button onclick="calcularMediaVetor()">4. Media de um Vetor</button><br><br>
+    <button onclick="verificarLetra()">5. Verificar Letra</button><br><br>
+    <button onclick="somaMatriz()">6. Soma dos Elementos da Matriz</button><br><br>
+    <button onclick="calcularFatorial()">7. Calcular Fatorial</button><br><br>
+    <button onclick="menuOpcoes()">8. Menu de Opcoes</button><br><br>
+    <button onclick="maiorNumeroVetor()">9. Maior Numero do Vetor</button><br><br>
+    <button onclick="mediaMatriz()">10. Media dos Elementos da Matriz</button><br><br>
+</body>
+</html>
